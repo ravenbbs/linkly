@@ -9,3 +9,7 @@ input {
 body {
   @apply bg-gray-100
 }
+
+.btn-primary {
+  @apply px-4 py-2 rounded-lg mx-auto
+}
