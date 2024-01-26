@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+
 export default function Login() {
   return (
     <div>
@@ -5,8 +8,10 @@ export default function Login() {
         <h1 className=" text-4xl font-bold text-center" >
           Inicia Sesión
         </h1>
-        <button className="btn-primary text-white bg-blue-500">
+        <button className="text-center btn-primary font-semibold text-white bg-blue-500"> 
+        <FontAwesomeIcon icon={faGoogle} className='w-6' />
           Inicia Con Google
+          
         </button>
       </div>
     </div>
