@@ -1,3 +1,5 @@
+import LoginWithGoogle from "@/components/buttons/LoginWithGoogle";
+
 export default function Login() {
   return (
     <div>
@@ -5,9 +7,7 @@ export default function Login() {
         <h1 className=" text-4xl font-bold text-center" >
           Regístrate
         </h1>
-        <button className="btn-primary text-white bg-blue-500">
-          Inicia Con Google
-        </button>
+        <LoginWithGoogle />
       </div>
     </div>
   );

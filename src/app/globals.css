@@ -11,5 +11,5 @@ body {
 }
 
 .btn-primary {
-  @apply px-4 py-2 rounded-lg mx-auto block
+  @apply px-4 py-2 rounded-lg mx-auto
 }
