@@ -4,7 +4,7 @@ export default function LogoutButton() {
   return (
     <button 
       onClick={() => signOut("google")}
-      className=" font-semibold border p-2 shadow  "
+      className=" btn btn-primary "
     >
       Cerrar sesión
     </button>
