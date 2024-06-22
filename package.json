@@ -9,13 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/mongodb-adapter": "^2.5.1",
+    "@auth/mongodb-adapter": "^3.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "lucide-react": "^0.363.0",
-    "mongodb": "^6.5.0",
+    "mongodb": "^6.7.0",
     "next": "14.1.0",
     "next-auth": "^4.24.7",
     "react": "^18",
@@ -23,6 +22,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.12.2",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
