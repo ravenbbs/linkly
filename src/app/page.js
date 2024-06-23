@@ -4,8 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      
-      <section className="font-semibold p-4 pt-32 mx-auto max-w-4xl">
+      <section className="font-semibold p-4 pt-20  mx-auto max-w-4xl">
         <div className="max-w-md mb-8">
           <h1 className="text-6xl font-bold">
             Tu único link <br />

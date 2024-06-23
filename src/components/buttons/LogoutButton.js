@@ -4,7 +4,7 @@ export default function LogoutButton() {
   return (
     <button 
       onClick={() => signOut("google")}
-      className=" btn btn-primary "
+      className="btn btn-error"
     >
       Cerrar sesión
     </button>
