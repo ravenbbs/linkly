@@ -6,8 +6,8 @@ import LogoutButton from "./buttons/LogoutButton";
 export default async function Header() {
   const session = await getServerSession(authOptions);
   return (
-    <header className="font-semibold border-b py-2">
-      <div className="navbar max-w-4xl mx-auto px-4">
+    <header className="font-semibold border-b py-2 ">
+      <div className="navbar max-w-4xl mx-auto px-4 bg-base-300/70">
         <div className="navbar-start">
 
           <Link className="btn btn-ghost text-xl py-1 h-fit" href={"/"}>
