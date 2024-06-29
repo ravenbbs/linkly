@@ -10,7 +10,7 @@ export default function HeroForm() {
     if("localStorage" in window && window.localStorage.getItem("desiredUsername")) {
       const userName = window.localStorage.getItem("desiredUsername")
       window.localStorage.removeItem("desiredUsername")
-      redirect('/account?username=' + userName)
+      redirect('/account?desiredUsername=' + userName)
     }
   }, [])
 
@@ -20,7 +20,6 @@ export default function HeroForm() {
     const form = ev.target
     const input = form.querySelector("input")
     const userName = input.value
-    console.log(userName)
 
     if(userName.length > 0) {
       window.localStorage.setItem("desiredUsername", userName)

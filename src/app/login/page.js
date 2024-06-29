@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import LoginWithGoogle from "@/components/buttons/LoginWithGoogle";
 
 export default function Login() {

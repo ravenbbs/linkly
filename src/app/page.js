@@ -1,6 +1,4 @@
 import HeroForm from "@/components/forms/HeroForm";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -36,9 +34,7 @@ export default function Home() {
           </svg>
           </div>
         </div>
-
         <HeroForm/>
-
       </section>
     </>
   );
