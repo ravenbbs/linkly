@@ -8,7 +8,8 @@ const pageSchema = new Schema({
     required: true,     // El campo 'uri' es obligatorio
     min: 1,             // El valor mínimo de longitud para 'uri' es 1
     unique: true        // El valor de 'uri' debe ser único en la colección
-  }
+  },
+  owner: {type: String , required: true}
 }, { 
   timestamps: true      // Agrega automáticamente los campos 'createdAt' y 'updatedAt'
 });
