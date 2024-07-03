@@ -119,19 +119,19 @@ export default async function Header() {
                   </li>
                 </ul>
               </div>
-              <dialog id="my_modal" class="modal h-screen w-screen ">
-                <div class="modal-box bg-base-200">
-                  <h3 class="font-bold text-lg">Cuidado!!</h3>
-                  <p class="py-4">Estas seguro de cerrar la sesión?</p>
+              <dialog id="my_modal" className="modal h-screen w-screen ">
+                <div className="modal-box bg-base-200">
+                  <h3 className="font-bold text-lg">Cuidado!!</h3>
+                  <p className="py-4">Estas seguro de cerrar la sesión?</p>
 
-                  <div class="modal-action">
+                  <div className="modal-action">
                     <form method="dialog">
-                      <button class="btn btn-secondary mr-2">Cancelar</button>
+                      <button className="btn btn-secondary mr-2">Cancelar</button>
                       <LogoutButton />
                     </form>
                   </div>
                 </div>
-                <form method="dialog" class="modal-backdrop">
+                <form method="dialog" className="modal-backdrop">
                   <button>close</button>
                 </form>
               </dialog>
