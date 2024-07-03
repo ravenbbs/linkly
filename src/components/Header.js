@@ -120,22 +120,21 @@ export default async function Header() {
                 </ul>
               </div>
               <dialog id="my_modal" class="modal h-screen w-screen ">
-            <div class="modal-box bg-base-200">
-              <h3 class="font-bold text-lg">Cuidado!!</h3>
-              <p class="py-4">Estas seguro de cerrar la sesión?</p>
+                <div class="modal-box bg-base-200">
+                  <h3 class="font-bold text-lg">Cuidado!!</h3>
+                  <p class="py-4">Estas seguro de cerrar la sesión?</p>
 
-              <div class="modal-action">
-                <form method="dialog">
-                  <button class="btn btn-secondary mr-2">Cancelar</button>
-                  <LogoutButton />
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn btn-secondary mr-2">Cancelar</button>
+                      <LogoutButton />
+                    </form>
+                  </div>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
                 </form>
-              </div>
-
-            </div>
-            <form method="dialog" class="modal-backdrop">
-              <button>close</button>
-            </form>
-          </dialog>
+              </dialog>
             </>
           )}
           {!session && <LoginWithGoogle />}
