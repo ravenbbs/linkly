@@ -9,25 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/mongodb-adapter": "^3.4.1",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "mongodb": "^6.7.0",
-    "mongoose": "^8.4.4",
-    "next": "14.1.0",
-    "next-auth": "^4.24.7",
-    "react": "^18.3.1",
-    "react-dom": "^18",
-    "react-hot-toast": "^2.4.1"
+    "@auth/mongodb-adapter": "3.4.1",
+    "@uploadthing/react": "^6.7.2",
+    "mongodb": "6.8.0",
+    "mongoose": "8.4.4",
+    "next": "14.2.4",
+    "next-auth": "4.24.7",
+    "package.json": "^0.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "uploadthing": "^6.13.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "daisyui": "^4.12.2",
-    "eslint": "^9.5.0",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "eslint": "9.6.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "5.5.3"
   }
 }
