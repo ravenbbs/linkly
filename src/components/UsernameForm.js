@@ -46,7 +46,9 @@ export default function UsernameForm({ desiredUsername }) {
           placeholder="Username"
         />
       </label>
-      <SubmitButton />
+      <SubmitButton>
+        Verificar Usuario
+      </SubmitButton>
     </form>
   );
 }

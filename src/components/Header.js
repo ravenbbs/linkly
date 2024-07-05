@@ -2,12 +2,13 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import LogoutButton from "./buttons/LogoutButton";
-import UserAvatar from "./UserAvatar";
 import LoginWithGoogle from "./buttons/LoginWithGoogle";
 import OpenModal from "./buttons/OpenModal";
+import Image from "next/image";
 
 export default async function Header() {
   const session = await getServerSession(authOptions);
+  console.log(session);
   return (
     <header className="font-semibold py-2 ">
       <div className="navbar max-w-4xl mx-auto px-4 bg-base-300/70 rounded-md shadow-lg">
@@ -100,7 +101,12 @@ export default async function Header() {
                   </h2>
                   <div className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full outline outline-primary">
-                      <UserAvatar UserImage={session?.user?.image} />
+                      <Image
+                        src={session.user.image}
+                        width={256}
+                        height={256}
+                        alt={"avatar"}
+                      />
                     </div>
                   </div>
                 </div>
@@ -126,7 +132,9 @@ export default async function Header() {
 
                   <div className="modal-action">
                     <form method="dialog">
-                      <button className="btn btn-secondary mr-2">Cancelar</button>
+                      <button className="btn btn-secondary mr-2">
+                        Cancelar
+                      </button>
                       <LogoutButton />
                     </form>
                   </div>

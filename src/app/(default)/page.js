@@ -6,7 +6,7 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
 
   return (
-      <section className="font-semibold p-4 pt-20 mx-auto max-w-4xl">
+      <section className="font-semibold p-4 pt-16 mx-auto max-w-4xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="max-w-md min-w-72 w-1/2">
             <h1 className="text-6xl font-bold">
