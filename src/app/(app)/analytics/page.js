@@ -19,8 +19,11 @@ export default async function AnalyticsPage({ searchParams }) {
 
   if (page) {
     return (<>
-    <div>
+    <div className="max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
+      <h2>
       Tu pagina de analytics
+
+      </h2>
     </div>
     </>)
   }
