@@ -12,3 +12,10 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.tab:is(input[type="radio"]) {
+  width: auto;
+  border-radius: 5px;
+  border-bottom-right-radius: 5px ;
+  border-bottom-left-radius: 5px;
+}
