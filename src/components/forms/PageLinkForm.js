@@ -61,7 +61,7 @@ export default function PageLinksForm({page,user}) {
       onClick={addNewLink}
       type="button"
       className="text-blue-500 text-lg flex gap-2 items-center cursor-pointer">
-      <Icon className="bg-blue-500 text-white p-1 rounded-full aspect-square" ssr={true} icon={"ic:round-plus"} />
+      <Icon className="bg-blue-500 text-white p-1 rounded-full aspect-square" icon={"ic:round-plus"} />
       <span>Agregar</span>
     </button>
     <div className="">
@@ -101,7 +101,7 @@ export default function PageLinksForm({page,user}) {
                 <button
                   onClick={() => removeLink(l.key)}
                   type="button" className="w-full bg-gray-300 py-2 px-3 mb-2 h-full flex gap-2 items-center justify-center">
-                  <Icon icon={"iconamoon:trash-duotone"}  ssr={true}/>
+                  <Icon icon={"iconamoon:trash-duotone"} />
                   <span>Eliminar</span>
                 </button>
               </div>

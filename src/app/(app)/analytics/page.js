@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import UsernameForm from "@/components/UsernameForm";
 import { Page } from "@/models/Page";
 import mongoose from "mongoose";
+import AppAside from "@/components/layout/AppAside";
 
 export default async function AnalyticsPage({ searchParams }) {
   const session = await getServerSession(authOptions);
@@ -14,18 +15,17 @@ export default async function AnalyticsPage({ searchParams }) {
   }
   mongoose.connect(process.env.MONGODB_URI);
 
-
-  const page = await Page.findOne({owner: session?.user?.email})
+  const page = await Page.findOne({ owner: session?.user?.email });
 
   if (page) {
-    return (<>
-    <div className="max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
-      <h2>
-      Tu pagina de analytics
-
-      </h2>
-    </div>
-    </>)
+    return (
+      <>
+        <AppAside UserImage={session?.user?.image} uri={page.uri} />
+        <div className="max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
+          <h2>Tu pagina de analytics</h2>
+        </div>
+      </>
+    );
   }
 
   return (

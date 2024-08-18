@@ -69,7 +69,6 @@ export default function AppAside({ UserImage, uri }) {
               <Icon
                 icon={"foundation:social-treehouse"}
                 fontSize={38}
-                ssr={true}
               />
               /{uri}
             </Link>

@@ -81,7 +81,7 @@ export default function PageButtonsForm({page}) {
                   onClick={() => removeButton(b)}
                   type="button"
                   className="py-2 px-4  cursor-pointer">
-                  <Icon icon={"iconamoon:trash-duotone"} ssr={true} />
+                  <Icon icon={"iconamoon:trash-duotone"} />
                 </button>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function PageButtonsForm({page}) {
               <span className="">
                 {upperFirst(b.label)}
               </span>
-              <Icon icon={"ic:round-plus"} ssr={true}/>
+              <Icon icon={"ic:round-plus"} />
             </button>
           ))}
         </div>
