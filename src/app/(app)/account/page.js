@@ -8,6 +8,7 @@ import PageButtonsForm from "@/components/forms/PageButtonsForm";
 import UsernameForm from "@/components/UsernameForm";
 import PageLinksForm from "@/components/forms/PageLinkForm";
 import { User } from "@/models/User";
+import AppAside from "@/components/layout/AppAside";
 
 export default async function AccountPage({ searchParams }) {
   const session = await getServerSession(authOptions);
@@ -16,18 +17,28 @@ export default async function AccountPage({ searchParams }) {
   if (!session) {
     return redirect("/");
   }
-  mongoose.connect(process.env.MONGODB_URI);
+  
+  // Connect to MongoDB if not already connected
+  if (mongoose.connection.readyState !== 1) {
+    await mongoose.connect(process.env.MONGODB_URI);
+  }
 
-  const page = await Page.findOne({ owner: session?.user?.email});
-  const user = await User.findOne({owner: session?.user?.email})
+  const page = await Page.findOne({ owner: session?.user?.email });
+  const user = await User.findOne({ owner: session?.user?.email });
 
-  if (page) {
+  const pagePlain = page ? page.toJSON() : null;
+  const userPlain = user ? user.toJSON() : null;
+
+  if (pagePlain) {
     return (
-      <div className="flex flex-col gap-2 max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
-        <PageSettingsForm page={page} user={user} session={session} />
-        <PageButtonsForm page={page} />
-        <PageLinksForm page={page} user={session?.user} />
-      </div>
+      <>
+        <AppAside UserImage={session?.user?.image} uri={pagePlain.uri}/>
+        <div className="flex flex-col gap-2 max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
+          <PageSettingsForm page={pagePlain} user={userPlain} session={session} />
+          <PageButtonsForm page={pagePlain} />
+          <PageLinksForm page={pagePlain} user={session?.user} />
+        </div>
+      </>
     );
   }
 

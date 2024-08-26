@@ -15,7 +15,7 @@ export default function UsernameForm({ desiredUsername }) {
     if (result) {
       redirect("/account?created=" + formData.get("username"));
     } else {
-      toast.error("Usuario disponible!");
+      toast.error("Usuario no disponible!");
     }
   }
 
