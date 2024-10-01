@@ -9,7 +9,7 @@ export default function AppAside({ UserImage, uri }) {
   const path = usePathname();
 
   return (
-    <aside className="drawer w-screen h-24 sm:w-52 sm:drawer-open z-10  top-2 sm:relative sm:top-0 absolute ">
+    <aside className="drawer min-w-max w-screen h-24 sm:w-52 sm:drawer-open -z-10  top-2 sm:relative sm:top-0 absolute sm:mr-12">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content block sm:hidden">
         <div className="navbar max-w-4xl mx-auto px-4 bg-base-300/70 rounded-md shadow-lg">
