@@ -31,14 +31,14 @@ export default async function AccountPage({ searchParams }) {
 
   if (pagePlain) {
     return (
-      <>
+      <div className="flex flex-col sm:flex-row">
         <AppAside UserImage={session?.user?.image} uri={pagePlain.uri}/>
-        <div className="flex flex-col shrink-0 gap-2 max-w-4xl self-end bg-base-300 mt-24 sm:mt-0">
+        <div className="flex flex-col gap-2 max-w-3xl w-auto self-end bg-base-300 mt-2 sm:mt-0">
           <PageSettingsForm page={pagePlain} user={userPlain} session={session} />
           <PageButtonsForm page={pagePlain} />
           <PageLinksForm page={pagePlain} user={session?.user} />
         </div>
-      </>
+      </div>
     );
   }
 

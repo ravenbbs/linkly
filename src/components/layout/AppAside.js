@@ -9,7 +9,7 @@ export default function AppAside({ UserImage, uri }) {
   const path = usePathname();
 
   return (
-    <aside className="drawer min-w-max w-screen h-24 sm:w-52 sm:drawer-open -z-10  top-2 sm:relative sm:top-0 absolute sm:mr-12">
+    <aside className="drawer min-w-48 w-screen h-24 sm:w-52 sm:drawer-open z-10 ">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content block sm:hidden">
         <div className="navbar max-w-4xl mx-auto px-4 bg-base-300/70 rounded-md shadow-lg">
@@ -51,9 +51,9 @@ export default function AppAside({ UserImage, uri }) {
         <label
           htmlFor="my-drawer"
           aria-label="close sidebar"
-          className="drawer-overlay"
+          className="drawer-overlay "
         ></label>
-        <ul className="menu fixed  bg-base-300 gap-6 text-base-content min-h-full p-4 px-6 ">
+        <ul className="menu bg-base-300 gap-6 text-base-content min-h-full p-4 px-6 ">
           <div className="w-36 mx-auto overflow-hidden rounded-full outline outline-primary">
             <Image
               priority
